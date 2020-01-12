@@ -24,7 +24,7 @@ build-nc: ## Build the container without caching
 	docker build --no-cache -t $(ORG_NAME)/$(APP_NAME):$(TAG_NAME) --no-cache -t $(ORG_NAME)/$(APP_NAME):latest .
 
 run: ## Run container on port configured in `config.env`
-	docker run -d -t --rm -p=$(OPORT):$(IPORT) --name $(RUN_NAME) $(ORG_NAME)/$(APP_NAME):$(TAG_NAME)
+	docker run -d -t --rm --name $(RUN_NAME) $(ORG_NAME)/$(APP_NAME):$(TAG_NAME)
 
 up: build run ## Run container on port configured in `.config.env` (Alias to run)
 
