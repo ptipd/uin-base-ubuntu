@@ -8,6 +8,6 @@ RUN printf "Build of ptipd/uin-base-ubuntu:1.1_18.04, date: %s\n" `date -u +"%Y-
     apt-get -y install git curl wget wput gpg-agent && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /usr/share/doc/* /usr/share/man/* && \
-    rm -f /var/log/*log /var/log/apache2/*log var/log/apt/*log
+    rm -f /var/log/*log var/log/apt/*log
 
 CMD ["/bin/bash"]
