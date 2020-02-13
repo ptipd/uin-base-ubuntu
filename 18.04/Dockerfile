@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN printf "Build of ptipd/uin-base-ubuntu:1.3_18.04, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` > /etc/BUILD && \
+RUN printf "Build of ptipd/uin-base-ubuntu:1.4_18.04, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` > /etc/BUILD && \
     apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
         apt-get -y install tzdata locales \
