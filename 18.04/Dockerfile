@@ -22,12 +22,12 @@ alias grep='grep --color=auto'\n\
 alias i='free -h'\n\
 alias s='cd ..'\n\
 alias p='cd -'\n\
-alias l='ls -CF'\n\
-alias h='ls -lhCF'\n\
+alias l='ls -F'\n\
+alias h='ls -lhF'\n\
 alias a='ls -A'\n\
-alias ha='ls -lhCFA'\n\
-alias la='ls -CFA'\n\
-alias ll='ls -lCFA'\n\
+alias ha='ls -lhFA'\n\
+alias la='ls -FA'\n\
+alias ll='ls -lF'\n\
 alias r='more'\n\
 alias k='head'\n\
 alias c='cat'\n\
