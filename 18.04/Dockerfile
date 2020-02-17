@@ -1,6 +1,9 @@
-FROM ubuntu:18.04
+ARG OWN_BASE
+FROM ${OWN_BASE}
 
-RUN printf "Build of ptipd/uin-base-ubuntu:1.5_18.04, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` > /etc/BUILD && \
+ARG APP_BUILD
+
+RUN printf "Build of ${APP_BUILD}, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` > /etc/BUILD && \
     apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
         apt-get -y install tzdata locales \
