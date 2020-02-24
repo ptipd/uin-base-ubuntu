@@ -9,8 +9,10 @@ RUN printf "Build of ${APP_BUILD}, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` >
         apt-get -y install tzdata locales \
         file tree diffutils findutils multitail dos2unix html2text csvtool jq bc \
         net-tools iputils-ping socket telnet netcat-openbsd mtr-tiny socat \
-        ftp lftp curl wget wput sendemail libnet-smtp-ssl-perl rsync rclone \
+        ftp lftp curl wget wput sendemail libnet-smtp-ssl-perl rsync \
         logrotate git gpg-agent sqlite3 vim.tiny ldap-utils mysql-client && \
+    wget https://downloads.rclone.org/rclone-current-linux-amd64.deb -P /var/cache/apt/archives/ && \
+    dpkg -i /var/cache/apt/archives/rclone-current-linux-amd64.deb && \
     apt-get clean && \
     locale-gen id_ID && \
     locale-gen id_ID.UTF-8 && \
