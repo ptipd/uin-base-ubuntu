@@ -21,7 +21,7 @@ RUN printf "Build of ${APP_BUILD}, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` >
     ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
     update-locale && \
-    echo -e "#\n\
+    echo "#\n\
 alias egrep='egrep --color=auto'\nalias fgrep='fgrep --color=auto'\nalias grep='grep --color=auto'\n\
 alias i='free -h'\nalias df='clear; df -h'\nalias du='du -csh'\n\
 alias l='ls -F'\nalias h='ls -lhF'\nalias a='ls -A'\nalias ha='ls -lhFA'\nalias la='ls -FA'\nalias ll='ls -lF'\n\
